@@ -2,10 +2,11 @@
 
 def my_collect (array)
   i = 0
+  new_array = []
   while array.length > i 
-    yield (array[i].upcase)
+    new_array << yield (array[i])
     i += 1 
   end 
-  return array.split("").first
+  new_array
 end
   
